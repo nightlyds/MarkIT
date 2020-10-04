@@ -1,0 +1,96 @@
+import React from "react";
+import Translate from "react-translate-component";
+
+import "../../css/base.css";
+import "../../css/media_base.css";
+import "../../css/normalize.css";
+
+import Close from "../../images/close.svg";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUserPlus } from "@fortawesome/free-solid-svg-icons";
+
+const MobileMenu = ({ closeMenu }) => {
+  return (
+    <div className="header-mobile-menu">
+      <div className="header-mobile-menu-close">
+        <img
+          src={Close}
+          className="header-mobile-menu-close-icon"
+          alt="Close menu"
+          onClick={() => {
+            closeMenu();
+          }}
+        />
+      </div>
+      <div className="header-mobile-menu-content">
+        <div className="header-menu-link">
+          <Translate
+            content="aboutService"
+            component="a"
+            href="/"
+            className="header-menu-about"
+          ></Translate>
+        </div>
+        <div className="header-menu-link">
+          <Translate
+            content="partners"
+            component="a"
+            href="/partners"
+            className="header-menu-partners"
+          ></Translate>
+        </div>
+        <div className="header-menu-link">
+          <Translate
+            content="services"
+            component="a"
+            href="/"
+            className="header-menu-services"
+          ></Translate>
+        </div>
+        <div className="header-menu-link">
+          <Translate
+            content="products"
+            component="a"
+            href="/"
+            className="header-menu-products"
+          ></Translate>
+        </div>
+        <div className="header-language-link">
+          <span className="header-language-en header-language-active">EN</span>
+        </div>
+        <div className="header-language-link">
+          <span className="header-language-ru">RU</span>
+        </div>
+        <div className="header-language-link">
+          <span className="header-language-es">ES</span>
+        </div>
+        <div className="header-sign-link">
+          <Translate
+            content="signIn"
+            component="span"
+            className="header-sign-in"
+          />
+        </div>
+        <div
+          className="header-sign-link wow animate__fadeInDown"
+          data-wow-duration="1s"
+        >
+          <span className="header-sign-up-link">
+            <Translate
+              content="signUp"
+              component="span"
+              className="header-sign-up"
+            />
+            <FontAwesomeIcon
+              icon={faUserPlus}
+              className="header-sign-up-icon"
+            />
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default MobileMenu;

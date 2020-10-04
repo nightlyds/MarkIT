@@ -1,0 +1,20 @@
+export default{
+    aboutService: "About",
+    partners: "Partners",
+    services: "Services",
+    products: "Products",
+    signIn: "Sign In",
+    signUp: "Sign Up",
+    footerCall: "Call to Europe",
+    placeholderSignEmail: "Email",
+    placeholderSignPassword: "Password",
+    placeholderSignName: 'Name',
+    submitSignIn: "Send",
+    titleSignIn: "Sign In",
+    subTitleSignIn: "Send the form",
+    signError: "Write correct data!",
+    submitSignUp: "Register",
+    titleSignUp: "Sign Up",
+    subTitleSignUp: "Send the form",
+    pageNotFound: "Page doesn`t exist"
+}

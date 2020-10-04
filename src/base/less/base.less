@@ -1,0 +1,279 @@
+@import "fonts_colors.css";
+@import (reference) "fonts_colors";
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+}
+.header {
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.6);
+  display: grid;
+  grid-template-columns: 5fr 3fr 0.7fr 4fr;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 10001;
+}
+.header-logo {
+  margin-left: 40%;
+  margin-top: 15px;
+  outline: none;
+}
+.header-menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  a {
+    font-weight: bold;
+    color: @black;
+    &:hover,
+    &:active,
+    &:focus {
+      color: @dark_blue;
+    }
+  }
+}
+.header-menu-link,
+.header-language-link {
+  padding-top: 40px;
+}
+.header-language {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 5px;
+  span {
+    font-weight: bold;
+    color: @black;
+    padding: 7.5px;
+    &:hover,
+    &:active,
+    &:focus {
+      cursor: pointer;
+      color: @dark_blue;
+    }
+  }
+}
+.header-language-active {
+  border: 2px solid @dark_blue;
+  border-radius: 100%;
+  color: @dark_blue !important;
+}
+.header-sign-box {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  width: 100%;
+}
+.header-sign-in {
+  font-weight: bold;
+  color: @black;
+  margin-left: 60px;
+  margin-top: 40px;
+  display: inline-block;
+  &:hover,
+  &:active,
+  &:focus {
+    cursor: pointer;
+    color: @dark_blue;
+  }
+}
+.header-sign-up-link {
+  display: inline-block;
+  background-color: @dark_blue;
+  width: 40%;
+  margin-top: 27px;
+  text-align: center;
+  height: 36px;
+  padding-top: 14px;
+  border-radius: 30px;
+  &:hover,
+  &:active,
+  &:focus {
+    cursor: pointer;
+    background-color: @darker_blue;
+  }
+}
+.header-sign-up {
+  font-weight: bold;
+  color: @white;
+  margin-right: 10px;
+  text-transform: uppercase;
+}
+.header-sign-up-icon {
+  color: @white;
+}
+.header-mobile-link {
+  display: none;
+}
+.hidden {
+  display: none !important;
+}
+.footer {
+  border-top: 1px solid #d6d6d6;
+  padding-top: 40px;
+  display: grid;
+  grid-template-columns: 3fr 5fr 3fr;
+  margin-bottom: 10px;
+}
+.footer-logo {
+  margin-left: 57%;
+  outline: none;
+}
+.footer-contacts {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-column-gap: 10px;
+}
+.footer-email-box,
+.footer-number-box {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 12px;
+  margin-bottom: 18px;
+}
+.footer-email,
+.footer-number {
+  font-weight: bold;
+  color: @black;
+  &:hover,
+  &:active,
+  &:focus {
+    color: @dark_blue;
+  }
+}
+.footer-email-title,
+.footer-number-title {
+  font-weight: bold;
+  color: @dark_blue;
+}
+.footer-social-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 5fr;
+  margin-top: 18px;
+}
+.footer-facebook-icon,
+.footer-instagram-icon,
+.footer-telegram-icon,
+.footer-vk-icon,
+.footer-youtube-icon {
+  font-size: 38px;
+  color: @dark_blue;
+  &:hover,
+  &:active,
+  &:focus {
+    color: @darker_blue;
+  }
+}
+.sign-in-modal,
+.sign-up-modal {
+  z-index: 10003;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.sign-in-modal-box,
+.sign-up-modal-box {
+  display: block;
+  margin: auto;
+  margin-top: 250px;
+  min-height: 360px;
+  padding-bottom: 40px;
+  height: auto;
+  width: 22.5%;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+.sign-in-modal-close-box,
+.sign-up-modal-close-box {
+  text-align: right;
+}
+.sign-in-modal-close-icon,
+.sign-up-modal-close-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 40px;
+  margin-top: 25px;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  &:hover,
+  &:active,
+  &:focus {
+    cursor: pointer;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+.sign-in-modal-header,
+.sign-up-modal-header {
+  margin-top: 30px;
+}
+.sign-in-modal-title,
+.sign-up-modal-title {
+  line-height: 0px;
+}
+.sign-in-modal-sub-title,
+.sign-up-modal-sub-title {
+  font-weight: bold;
+}
+.sign-in-modal-fields,
+.sign-up-modal-fields {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 20px;
+}
+.sign-in-modal-email,
+.sign-in-modal-password,
+.sign-up-modal-email,
+.sign-up-modal-password,
+.sign-up-modal-name {
+  background-color: inherit;
+  box-shadow: none;
+  height: 50px;
+  width: 80%;
+  margin: auto;
+  border: 1px solid #dadada;
+  border-radius: 30px;
+  padding-left: 15px;
+  &:hover,
+  &:active,
+  &:focus {
+    border: 1px solid @dark_blue;
+  }
+}
+.sign-in-modal-submit,
+.sign-up-modal-submit {
+  background-color: @dark_blue;
+  border: none;
+  box-shadow: none;
+  color: @white;
+  height: 50px;
+  width: 40%;
+  margin: auto;
+  border-radius: 30px;
+  &:hover,
+  &:active,
+  &:focus {
+    cursor: pointer;
+    background-color: @darker_blue;
+  }
+  &:disabled {
+    background-color: @darker_blue;
+    cursor: default;
+  }
+}
+.sign-modal-error {
+  line-height: 0px;
+  color: red;
+}
+.error-404{
+  padding-top: 250px;
+  margin-bottom: 40vh;
+  text-align: center;
+}
+.error-404-title, .error-404-title-text{
+  font-size: 54px;
+  color: @dark_blue;
+}
