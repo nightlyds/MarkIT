@@ -26,11 +26,33 @@ const SignInModal = ({ closeSignInModal }) => {
       setPassword(false)
     }
   };
+  const getCookie = (name) => {
+    let cookie = " " + document.cookie;
+    let search = " " + name + "=";
+    let setStr = null;
+    let offset = 0;
+    let end = 0;
+    if (cookie.length > 0) {
+      offset = cookie.indexOf(search);
+      if (offset !== -1) {
+        offset += search.length;
+        end = cookie.indexOf(";", offset);
+        if (end === -1) {
+          end = cookie.length;
+        }
+        setStr = unescape(cookie.substring(offset, end));
+      }
+    }
+    return setStr;
+  };
   const checkData = () => {
     if (email && password) {
-      alert("ok");
-    } else {
-      setError(true);
+      if(getCookie("email") === email && getCookie('password') === password){
+        window.location = '/myprofile'
+      }
+      else{
+        setError(true)
+      }
     }
   };
   return (
@@ -78,7 +100,7 @@ const SignInModal = ({ closeSignInModal }) => {
           <div className="sign-in-modal-error-box">
             <Translate
               component="p"
-              content="signUpError"
+              content="signError"
               className={`sign-modal-error ${error ? "" : "hidden"}`}
             />
           </div>

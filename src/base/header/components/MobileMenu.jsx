@@ -1,10 +1,6 @@
 import React from "react";
 import Translate from "react-translate-component";
 
-import "../../css/base.css";
-import "../../css/media_base.css";
-import "../../css/normalize.css";
-
 import Close from "../../images/close.svg";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

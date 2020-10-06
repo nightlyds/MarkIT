@@ -36,9 +36,16 @@ const SignUpModal = ({ closeSignUpModal }) => {
       setPassword(false)
     }
   };
+  const setCookie = (name, value) => {
+    let date = new Date();
+    date.setTime(date.getTime() + 60 * 1000 * 24 * 30);
+    document.cookie = name + "=" + value + "; expires='" + date + ";'";
+  };
   const checkData = () => {
     if (email && password) {
-      alert("ok");
+      setCookie('email', email)
+      setCookie('password', password)
+      window.location = '/myprofile'
     } else {
       setError(true);
     }

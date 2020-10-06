@@ -16,8 +16,9 @@ import es from "../lang/es.js";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserPlus } from "@fortawesome/free-solid-svg-icons";
+import { ProfileData } from "./components/ProfileData.jsx";
 
-export const Header = () => {
+export const Header = ({ profile }) => {
   let [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   let [signInModal, setSignInModalOpen] = useState(false);
   let [signUpModal, setSignUpModalOpen] = useState(false);
@@ -258,6 +259,7 @@ export const Header = () => {
             </span>
           </div>
         </div>
+        {profile && <ProfileData />}
       </div>
     </div>
   );

@@ -168,6 +168,62 @@
     color: @darker_blue;
   }
 }
+.myprofile-wrapper{
+  .header {
+    grid-template-columns: 3fr 0.5fr 2fr;
+    box-shadow: none;
+    background: none;
+    width: 80%;
+    border-bottom: 1px solid #D8D8D8;
+  }
+  .header-logo-box, .header-sign-box  {
+    display: none;
+  }
+  .header-menu {
+    padding-left: 25%;
+  }
+  .footer {
+    border-top: 1px solid #D8D8D8;
+    grid-template-columns: 2fr 3fr 2fr;
+    margin-top: 200px;
+  }
+  .footer-logo {
+    margin-left: 30%;
+  }
+  .footer-contacts {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer-social-links {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 2fr;
+  }
+  .header-profile-data{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+  }
+  .header-profile-data-image-box{
+    margin-left: 30px;
+    margin-top: 27px;
+  }
+  .header-profile-data-image{
+    background-color: #D1D1D1;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+  }
+  .header-profile-data-email-box{
+    margin-top: 39px;
+    color: #156BFF;
+  }
+  .header-profile-data-icon{
+    margin-left: 10px;
+  }
+  .header-profile-data-email-box{
+    &:hover, &:focus, &:active{
+      color: #0040ae;
+      cursor: pointer;
+    }
+  }
+}
 .sign-in-modal,
 .sign-up-modal {
   z-index: 10003;
