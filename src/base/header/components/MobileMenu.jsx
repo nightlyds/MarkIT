@@ -10,7 +10,7 @@ import Close from "../../images/close.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserPlus } from "@fortawesome/free-solid-svg-icons";
 
-const MobileMenu = ({ closeMenu }) => {
+const MobileMenu = ({ closeMenu, chooseLanguage, getCookie }) => {
   return (
     <div className="header-mobile-menu">
       <div className="header-mobile-menu-close">
@@ -57,13 +57,40 @@ const MobileMenu = ({ closeMenu }) => {
           ></Translate>
         </div>
         <div className="header-language-link">
-          <span className="header-language-en header-language-active">EN</span>
+          <span
+            className={`header-language-en ${
+              getCookie("language") === "en" ? "header-language-active" : ""
+            }`}
+            onClick={() => {
+              chooseLanguage("en");
+            }}
+          >
+            EN
+          </span>
         </div>
         <div className="header-language-link">
-          <span className="header-language-ru">RU</span>
+          <span
+            className={`header-language-ru ${
+              getCookie("language") === "ru" ? "header-language-active" : ""
+            }`}
+            onClick={() => {
+              chooseLanguage("ru");
+            }}
+          >
+            RU
+          </span>
         </div>
         <div className="header-language-link">
-          <span className="header-language-es">ES</span>
+          <span
+            className={`header-language-es ${
+              getCookie("language") === "es" ? "header-language-active" : ""
+            }`}
+            onClick={() => {
+              chooseLanguage("es");
+            }}
+          >
+            ES
+          </span>
         </div>
         <div className="header-sign-link">
           <Translate

@@ -1,0 +1,20 @@
+export default{
+    aboutService: "Acerca de",
+    partners: "Socios",
+    services: "Servicios",
+    products: "Productos",
+    signIn: "Entrada",
+    signUp: "Regístrate",
+    footerCall: "Calls within EUROPE",
+    placeholderSignEmail: "Email",
+    placeholderSignPassword: "Password",
+    placeholderSignName: 'Name',
+    submitSignIn: "Send",
+    titleSignIn: "Entrada",
+    subTitleSignIn: "Fill up the form",
+    signError: "Write correct data!",
+    submitSignUp: "Send",
+    titleSignUp: "Regístrate",
+    subTitleSignUp: "Fill up the form",
+    pageNotFound: "Page doesn`t exist"
+}

@@ -1,0 +1,20 @@
+export default{
+    aboutService: "О сервисе",
+    partners: "Партнёры",
+    services: "Услуги",
+    products: "Продукты",
+    signIn: "Вход",
+    signUp: "Регистрация",
+    footerCall: "Звонки по ЕВРОПЕ",
+    placeholderSignEmail: "Email",
+    placeholderSignPassword: "Пароль",
+    placeholderSignName: 'Имя',
+    submitSignIn: "Отправить",
+    titleSignIn: "Вход",
+    subTitleSignIn: "Отправить форму",
+    signError: "Заполните поля корректно!",
+    submitSignUp: "Отправить",
+    titleSignUp: "Регистрация",
+    subTitleSignUp: "Отправить форму",
+    pageNotFound: "Страница не существует"
+}

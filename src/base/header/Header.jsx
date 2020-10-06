@@ -100,8 +100,14 @@ export const Header = () => {
     window.location.reload();
   };
   return (
-    <div>
-      {mobileMenuOpen && <MobileMenu closeMenu={closeMobileMenu} />}
+    <div className="header-box">
+      {mobileMenuOpen && (
+        <MobileMenu
+          closeMenu={closeMobileMenu}
+          chooseLanguage={chooseLanguage}
+          getCookie={getCookie}
+        />
+      )}
       {signInModal && <SignInModal closeSignInModal={closeSignInModal} />}
       {signUpModal && <SignUpModal closeSignUpModal={closeSignUpModal} />}
       <div className="header">
@@ -181,7 +187,9 @@ export const Header = () => {
         >
           <div className="header-language-link">
             <span
-              className="header-language-en header-language-active"
+              className={`header-language-en ${
+                getCookie("language") === "en" ? "header-language-active" : ""
+              }`}
               onClick={() => {
                 chooseLanguage("en");
               }}
@@ -191,7 +199,9 @@ export const Header = () => {
           </div>
           <div className="header-language-link">
             <span
-              className="header-language-ru"
+              className={`header-language-ru ${
+                getCookie("language") === "ru" ? "header-language-active" : ""
+              }`}
               onClick={() => {
                 chooseLanguage("ru");
               }}
@@ -201,7 +211,9 @@ export const Header = () => {
           </div>
           <div className="header-language-link">
             <span
-              className="header-language-es"
+              className={`header-language-es ${
+                getCookie("language") === "es" ? "header-language-active" : ""
+              }`}
               onClick={() => {
                 chooseLanguage("es");
               }}
