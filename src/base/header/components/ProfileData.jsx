@@ -1,8 +1,6 @@
 import React from "react";
 
-import {
-  faChevronDown
-} from "@fortawesome/free-solid-svg-icons";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const ProfileData = () => {
@@ -26,12 +24,17 @@ export const ProfileData = () => {
     return setStr;
   };
   let email = getCookie("email");
-  if (getCookie("email").length >= 10) {
-    if (document.documentElement.clientWidth <= 991) {
-      email = getCookie("email").substring(0, 10) + "...";
-    }
-    if(document.documentElement.clientWidth >= 991 && document.documentElement.clientWidth <= 1550){
-      email = getCookie("email").substring(0, 15) + "...";
+  if (email) {
+    if (getCookie("email").length >= 10) {
+      if (document.documentElement.clientWidth <= 991) {
+        email = getCookie("email").substring(0, 10) + "...";
+      }
+      if (
+        document.documentElement.clientWidth >= 991 &&
+        document.documentElement.clientWidth <= 1550
+      ) {
+        email = getCookie("email").substring(0, 15) + "...";
+      }
     }
   }
   return (
