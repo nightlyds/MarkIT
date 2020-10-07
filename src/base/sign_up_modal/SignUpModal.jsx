@@ -8,32 +8,41 @@ const SignUpModal = ({ closeSignUpModal }) => {
   let [name, setName] = useState(false);
   let [email, setEmail] = useState(false);
   let [password, setPassword] = useState(false);
-  let [error, setError] = useState(false);
+  let [errorEmail, setErrorEmail] = useState(false);
+  let [errorName, setErrorName] = useState(false);
+  let [errorPassword, setErrorPassword] = useState(false);
 
   const validateName = (name) => {
     var reg = /^[\w\dА-я]+$/;
-    if (reg.test(name) === true && name.length >= 5) {
+    if (reg.test(name) === true && name.length >= 3) {
       setName(name);
-    }
-    else{
+      setErrorName(false);
+    } else {
       setName(false);
     }
   };
   const validateEmail = (email) => {
+    if (!name) {
+      setErrorName(true);
+    }
     var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
     if (reg.test(email) === true) {
       setEmail(email);
-    }
-    else{
-      setEmail(false)
+      setErrorEmail(false);
+    } else {
+      setEmail(false);
     }
   };
   const checkPassword = (password) => {
+    if (!email) {
+      setErrorEmail(true);
+    }
     if (password.length >= 8) {
       setPassword(password);
-    }
-    else{
-      setPassword(false)
+      setErrorPassword(false);
+    } else {
+      setPassword(false);
+      setErrorPassword(true);
     }
   };
   const setCookie = (name, value) => {
@@ -43,16 +52,18 @@ const SignUpModal = ({ closeSignUpModal }) => {
   };
   const checkData = () => {
     if (email && password) {
-      setCookie('email', email)
-      setCookie('password', password)
-      window.location = '/myprofile'
-    } else {
-      setError(true);
+      setCookie("email", email);
+      setCookie("password", password);
+      window.location = "/myprofile";
     }
   };
   return (
     <div className="sign-up-modal">
-      <div className={`sign-up-modal-box ${document.documentElement.clientWidth >= 991 ? "animate__animated" : ''} animate__fadeInDown animate__fast`}>
+      <div
+        className={`sign-up-modal-box ${
+          document.documentElement.clientWidth >= 991 ? "animate__animated" : ""
+        } animate__fadeInDown animate__fast`}
+      >
         <div className="sign-up-modal-close-box">
           <img
             src={Close}
@@ -83,6 +94,15 @@ const SignUpModal = ({ closeSignUpModal }) => {
             attributes={{ placeholder: "placeholderSignName" }}
             onChange={(name) => validateName(name.target.value)}
           />
+          {errorName && (
+            <div className="sign-in-modal-error-box">
+              <Translate
+                component="p"
+                content="signErrorUpName"
+                className="sign-modal-error"
+              />
+            </div>
+          )}
           <Translate
             component="input"
             type="email"
@@ -90,6 +110,15 @@ const SignUpModal = ({ closeSignUpModal }) => {
             attributes={{ placeholder: "placeholderSignEmail" }}
             onChange={(email) => validateEmail(email.target.value)}
           />
+          {errorEmail && (
+            <div className="sign-in-modal-error-box">
+              <Translate
+                component="p"
+                content="signErrorEmail"
+                className="sign-modal-error"
+              />
+            </div>
+          )}
           <Translate
             component="input"
             type="password"
@@ -99,13 +128,15 @@ const SignUpModal = ({ closeSignUpModal }) => {
               checkPassword(password.target.value);
             }}
           />
-          <div className="sign-up-modal-error-box">
-            <Translate
-              component="p"
-              content="signError"
-              className={`sign-modal-error ${error ? "" : "hidden"}`}
-            />
-          </div>
+          {errorPassword && (
+            <div className="sign-in-modal-error-box">
+              <Translate
+                component="p"
+                content="signErrorUpPassword"
+                className="sign-modal-error"
+              />
+            </div>
+          )}
           <Translate
             component="button"
             content="submitSignUp"

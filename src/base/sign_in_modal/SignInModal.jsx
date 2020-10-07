@@ -2,30 +2,26 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Translate from "react-translate-component";
 
+import { Email, Password, Submit } from './components';
+
 import Close from "../images/close.svg";
 
 const SignInModal = ({ closeSignInModal }) => {
   let [email, setEmail] = useState(false);
   let [password, setPassword] = useState(false);
-  let [error, setError] = useState(false);
+  let [errorEmail, setErrorEmail] = useState(false);
+  let [submitError, setSubmitError] = useState(false);
 
-  const validateEmail = (email) => {
-    var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-    if (reg.test(email) === true) {
-      setEmail(email);
-    }
-    else{
-      setEmail(false)
-    }
-  };
-  const checkPassword = (password) => {
-    if (password.length >= 8) {
-      setPassword(password);
-    }
-    else{
-      setPassword(false)
-    }
-  };
+  const emailGet = (value) => {
+    setEmail(value);
+  }
+  const passwordGet = (value) => {
+    setPassword(value);
+  }
+  const emailErrorGet = (value) => {
+    setErrorEmail(value);
+  }
+
   const getCookie = (name) => {
     let cookie = " " + document.cookie;
     let search = " " + name + "=";
@@ -47,17 +43,22 @@ const SignInModal = ({ closeSignInModal }) => {
   };
   const checkData = () => {
     if (email && password) {
-      if(getCookie("email") === email && getCookie('password') === password){
-        window.location = '/myprofile'
+      if (getCookie("email") === email && getCookie("password") === password) {
+        setSubmitError(false);
+        window.location = "/myprofile";
       }
       else{
-        setError(true)
+        setSubmitError(true);
       }
     }
   };
   return (
     <div className="sign-in-modal">
-      <div className={`sign-in-modal-box ${document.documentElement.clientWidth >= 991 ? "animate__animated" : ''} animate__fadeInDown animate__fast`}>
+      <div
+        className={`sign-in-modal-box ${
+          document.documentElement.clientWidth >= 991 ? "animate__animated" : ""
+        } animate__fadeInDown animate__fast`}
+      >
         <div className="sign-in-modal-close-box">
           <img
             src={Close}
@@ -81,39 +82,9 @@ const SignInModal = ({ closeSignInModal }) => {
           />
         </div>
         <div className="sign-in-modal-fields">
-          <Translate
-            component="input"
-            type="email"
-            className="sign-in-modal-email"
-            attributes={{ placeholder: "placeholderSignEmail" }}
-            onChange={(email) => validateEmail(email.target.value)}
-          />
-          <Translate
-            component="input"
-            type="password"
-            className="sign-in-modal-password"
-            attributes={{ placeholder: "placeholderSignPassword" }}
-            onChange={(password) => {
-              checkPassword(password.target.value);
-            }}
-          />
-          <div className="sign-in-modal-error-box">
-            <Translate
-              component="p"
-              content="signError"
-              className={`sign-modal-error ${error ? "" : "hidden"}`}
-            />
-          </div>
-          <Translate
-            component="button"
-            content="submitSignIn"
-            type="submit"
-            className="sign-in-modal-submit"
-            disabled={!email || !password}
-            onClick={() => {
-              checkData();
-            }}
-          />
+          <Email emailProps={emailGet} getEmailError={errorEmail} giveEmailError={emailErrorGet} />
+          <Password passwordProps={passwordGet} email={email} giveEmailError={emailErrorGet} />
+          <Submit email={email} password={password} getSubmitError={submitError} giveCheckData={checkData} />
         </div>
       </div>
     </div>

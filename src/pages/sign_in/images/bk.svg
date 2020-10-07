@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1058" viewBox="0 0 1920 1058">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Прямоугольник_124" data-name="Прямоугольник 124" width="1920" height="1058" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#c4c4c4"/>
+      <stop offset="1" stop-color="#00baff"/>
+    </linearGradient>
+  </defs>
+  <g id="Группа_масок_3" data-name="Группа масок 3" clip-path="url(#clip-path)">
+    <g id="Сгруппировать_353" data-name="Сгруппировать 353">
+      <path id="Контур_439" data-name="Контур 439" d="M-2516.7,609.034c284.056-223.418,515.892-353.6,911.944-161.1s698.592-90.972,751.386,192.116-302.389,860.193,168.387,952.813,129.468,551.955-474.011,575.412-962.093-647.657-1511.221-350.21S-2800.754,832.451-2516.7,609.034Z" transform="translate(-6.476 -1059.645) rotate(-124)" opacity="0.124" fill="url(#linear-gradient)"/>
+      <path id="Контур_487" data-name="Контур 487" d="M-2516.7,609.034c284.056-223.418,515.892-353.6,911.944-161.1s698.592-90.972,751.386,192.116-302.389,860.193,168.387,952.813,129.468,551.955-474.011,575.412-962.093-647.657-1511.221-350.21S-2800.754,832.451-2516.7,609.034Z" transform="matrix(0.839, 0.545, -0.545, 0.839, 2257.053, 1046.952)" opacity="0.124" fill="url(#linear-gradient)"/>
+    </g>
+  </g>
+</svg>

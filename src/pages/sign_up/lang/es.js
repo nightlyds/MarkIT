@@ -1,0 +1,17 @@
+export default{
+    signUpTitle: "Sign Up",
+    signUpEmailLabel: "Type your email:",
+    signUpCountryLabel: "Choose your country",
+    signUpCountryChoose: "Choose country from the list",
+    signUpPhoneLabel: "Phone Number",
+    signUpRights: "I give my agree on using my",
+    signUpRightsLink: "personal data",
+    signUpSubmit: "Registration",
+    signUpVariationsTitle: "Or register with:",
+    signErrorEmail: "Write correct email!",
+    signErrorCountry: "Choose country!",
+    signUpPasswordLabel: "Password",
+    signErrorPhone: "Type correct phone number!",
+    signErrorCheckbox: "Are you agree?",
+    signInErrorPassword: "Type correct password!",
+}

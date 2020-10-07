@@ -6,6 +6,7 @@ import Translate from "react-translate-component";
 import MobileMenu from "./components/MobileMenu.jsx";
 import SignInModal from "../sign_in_modal/SignInModal.jsx";
 import SignUpModal from "../sign_up_modal/SignUpModal.jsx";
+import { ProfileData } from "./components/ProfileData.jsx";
 
 import Logo from "../images/logo.svg";
 import MobileMenuIcon from "../images/menu.svg";
@@ -16,12 +17,10 @@ import es from "../lang/es.js";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserPlus } from "@fortawesome/free-solid-svg-icons";
-import { ProfileData } from "./components/ProfileData.jsx";
 
 export const Header = ({ profile }) => {
   let [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   let [signInModal, setSignInModalOpen] = useState(false);
-  let [signUpModal, setSignUpModalOpen] = useState(false);
 
   const openMobileMenu = () => {
     setMobileMenuOpen(true);
@@ -34,12 +33,6 @@ export const Header = ({ profile }) => {
   };
   const closeSignInModal = () => {
     setSignInModalOpen(false);
-  };
-  const openSignUpModal = () => {
-    setSignUpModalOpen(true);
-  };
-  const closeSignUpModal = () => {
-    setSignUpModalOpen(false);
   };
 
   counterpart.registerTranslations("en", en);
@@ -110,7 +103,6 @@ export const Header = ({ profile }) => {
         />
       )}
       {signInModal && <SignInModal closeSignInModal={closeSignInModal} />}
-      {signUpModal && <SignUpModal closeSignUpModal={closeSignUpModal} />}
       <div className="header">
         <div
           className={`header-mobile-link ${
@@ -150,7 +142,7 @@ export const Header = ({ profile }) => {
             <Translate
               content="aboutService"
               component="a"
-              href="/"
+              href="/#about"
               className="header-menu-about"
             ></Translate>
           </div>
@@ -241,11 +233,8 @@ export const Header = ({ profile }) => {
             />
           </div>
           <div className="header-sign-link">
-            <span
+            <Link to="/sign_up"
               className="header-sign-up-link"
-              onClick={() => {
-                openSignUpModal();
-              }}
             >
               <Translate
                 content="signUp"
@@ -256,7 +245,7 @@ export const Header = ({ profile }) => {
                 icon={faUserPlus}
                 className="header-sign-up-icon"
               />
-            </span>
+            </Link>
           </div>
         </div>
         {profile && <ProfileData />}

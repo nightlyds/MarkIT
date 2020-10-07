@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-    import { Link } from "react-router-dom";
-    import Translate from "react-translate-component";
+import { Link } from "react-router-dom";
+import Translate from "react-translate-component";
 
 import Logo from "../../images/logo.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -25,9 +25,9 @@ export const ProfileMenu = ({ component }) => {
     <div className="myprofile-menu">
       <div className="myprofile-menu-box">
         <div className="myprofile-menu-logo-box">
-          <>
+          <Link to="/">
             <img src={Logo} className="myprofile-menu-logo" alt="Logo" />
-          </>
+          </Link>
         </div>
         <div className="myprofile-menu-navigation">
           <div className="myprofile-menu-navigation-link-box">

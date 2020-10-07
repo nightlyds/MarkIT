@@ -35,12 +35,10 @@ export const FirstScreen = ({ openSignUpModal }) => {
               }}
             />
             <Translate
-              component="span"
+              component="a"
+              href="/sign_up"
               content="firstScreenContactSecondButton"
               className="main-first-screen-contact-second-button"
-              onClick={() => {
-                openSignUpModal();
-              }}
             />
           </div>
         </div>

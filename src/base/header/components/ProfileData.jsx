@@ -1,7 +1,5 @@
 import React from "react";
-
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from 'react-router-dom';
 
 export const ProfileData = () => {
   const getCookie = (name) => {
@@ -43,11 +41,7 @@ export const ProfileData = () => {
         <img src="" className="header-profile-data-image" alt="" />
       </div>
       <div className="header-profile-data-email-box">
-        <span className="header-profile-data-email">{email}</span>
-        <FontAwesomeIcon
-          icon={faChevronDown}
-          className="header-profile-data-icon"
-        />
+        <Link className="header-profile-data-email">{email}</Link>
       </div>
     </div>
   );

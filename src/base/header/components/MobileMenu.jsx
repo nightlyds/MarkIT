@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Translate from "react-translate-component";
 
 import Close from "../../images/close.svg";
@@ -24,7 +25,7 @@ const MobileMenu = ({ closeMenu, chooseLanguage, getCookie }) => {
           <Translate
             content="aboutService"
             component="a"
-            href="/"
+            href="/#about"
             className="header-menu-about"
           ></Translate>
         </div>
@@ -89,17 +90,19 @@ const MobileMenu = ({ closeMenu, chooseLanguage, getCookie }) => {
           </span>
         </div>
         <div className="header-sign-link">
-          <Translate
-            content="signIn"
-            component="span"
-            className="header-sign-in"
-          />
+          <Link to="/sign_in">
+            <Translate
+              content="signIn"
+              component="span"
+              className="header-sign-in"
+            />
+          </Link>
         </div>
         <div
           className="header-sign-link wow animate__fadeInDown"
           data-wow-duration="1s"
         >
-          <span className="header-sign-up-link">
+          <Link to="/sign_up" className="header-sign-up-link">
             <Translate
               content="signUp"
               component="span"
@@ -109,7 +112,7 @@ const MobileMenu = ({ closeMenu, chooseLanguage, getCookie }) => {
               icon={faUserPlus}
               className="header-sign-up-icon"
             />
-          </span>
+          </Link>
         </div>
       </div>
     </div>

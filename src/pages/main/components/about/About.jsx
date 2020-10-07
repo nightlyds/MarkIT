@@ -13,7 +13,7 @@ import {
 
 export const About = () => {
   return (
-    <div className="main-about">
+    <div className="main-about" id="about">
       <div className="main-about-header">
         <Translate
           component="h2"

@@ -1,0 +1,220 @@
+.sign-up-sign-form-content {
+  background-image: url(../images/bk.svg);
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding-top: 160px;
+  min-height: 70vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 40px;
+  padding-bottom: 60px;
+}
+.sign-up-sign-form-content-left-side {
+  padding-left: 45%;
+  width: 100%;
+}
+.sign-up-sign-form-content-left-side-title-box {
+  width: 45%;
+  text-align: center;
+}
+.sign-up-sign-form-content-left-side-form {
+  width: 45%;
+}
+.sign-up-sign-form-content-left-side-title {
+  color: #156bff;
+  font-size: 28px;
+}
+.sign-up-sign-form-content-left-side-form {
+  padding-top: 20px;
+}
+.sign-up-sign-form-content-left-side-form-label {
+  color: #156bff;
+  font-weight: bold;
+}
+.sign-up-sign-form-content-left-side-form-label:hover,
+.sign-up-sign-form-content-left-side-form-label:focus,
+.sign-up-sign-form-content-left-side-form-label:active {
+  cursor: pointer;
+  color: #0040ae;
+}
+.sign-up-sign-form-content-left-side-form-email-box,
+.sign-up-sign-form-content-left-side-form-country-box,
+.sign-up-sign-form-content-left-side-form-phone-box,
+.sign-up-sign-form-content-left-side-form-password-box {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 15px;
+}
+.sign-up-sign-form-content-left-side-form-email-box {
+  margin-top: 0px;
+}
+.sign-up-sign-form-content-left-side-form-email,
+.sign-up-sign-form-content-left-side-form-phone,
+.sign-up-sign-form-content-left-side-form-password {
+  background: inherit;
+  border: none;
+  box-shadow: none;
+  border-radius: 0px;
+  height: 40px;
+  border: 2px solid #156bff;
+  border-radius: 25px;
+  padding-left: 20px;
+}
+.sign-up-sign-form-content-left-side-form-email:hover,
+.sign-up-sign-form-content-left-side-form-phone:hover,
+.sign-up-sign-form-content-left-side-form-password:hover,
+.sign-up-sign-form-content-left-side-form-email:focus,
+.sign-up-sign-form-content-left-side-form-phone:focus,
+.sign-up-sign-form-content-left-side-form-password:focus,
+.sign-up-sign-form-content-left-side-form-email:active,
+.sign-up-sign-form-content-left-side-form-phone:active,
+.sign-up-sign-form-content-left-side-form-password:active {
+  border: 2px solid #0040ae;
+}
+.sign-up-sign-form-content-left-side-form-country-choose-box,
+.sign-up-sign-form-content-left-side-form-country-value-box {
+  display: grid;
+  grid-template-columns: 8fr 2fr;
+  height: 45px;
+  border: 2px solid #156bff;
+  border-radius: 25px;
+  padding-left: 20px;
+}
+.sign-up-sign-form-content-left-side-form-country-choose-box:hover,
+.sign-up-sign-form-content-left-side-form-country-value-box:hover,
+.sign-up-sign-form-content-left-side-form-country-choose-box:focus,
+.sign-up-sign-form-content-left-side-form-country-value-box:focus,
+.sign-up-sign-form-content-left-side-form-country-choose-box:active,
+.sign-up-sign-form-content-left-side-form-country-value-box:active {
+  cursor: pointer;
+  border: 2px solid #0040ae;
+}
+.sign-up-sign-form-content-left-side-form-country-choose,
+.sign-up-sign-form-content-left-side-form-country-value {
+  margin-top: 10px;
+  font-weight: bold;
+}
+.sign-up-sign-form-content-left-side-form-country-choose-icon {
+  margin-top: 12.5px;
+  padding-left: 25%;
+  font-size: 19px;
+  color: #156bff;
+}
+.sign-up-sign-form-content-left-side-form-checkbox-box {
+  margin-top: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.sign-up-sign-form-content-left-side-form-checkbox {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-color: #ffffff;
+  border: 2px solid #156bff;
+  border-radius: 100%;
+  float: left;
+  margin-top: 2px;
+}
+.sign-up-sign-form-content-left-side-form-checkbox:hover,
+.sign-up-sign-form-content-left-side-form-checkbox:focus,
+.sign-up-sign-form-content-left-side-form-checkbox:active {
+  cursor: pointer;
+}
+.sign-up-sign-form-content-left-side-form-checkbox-icon {
+  color: #156bff;
+  font-size: 11px;
+  margin-left: 2.525px;
+  margin-bottom: 1.5px;
+}
+.sign-up-sign-form-content-left-side-form-checkbox-text {
+  margin-left: 10px;
+}
+.sign-up-sign-form-content-left-side-form-checkbox-link {
+  color: #156bff;
+  text-decoration: underline;
+}
+.sign-up-sign-form-content-left-side-form-submit-box {
+  margin-top: 30px;
+}
+.sign-up-sign-form-content-left-side-form-submit-sub-box {
+  width: 55%;
+  height: 50px;
+  background-color: #156bff;
+  border-radius: 25px;
+  margin: auto;
+  color: #ffffff;
+  text-align: center;
+}
+.sign-up-sign-form-content-left-side-form-submit-sub-box:hover,
+.sign-up-sign-form-content-left-side-form-submit-sub-box:focus,
+.sign-up-sign-form-content-left-side-form-submit-sub-box:active {
+  cursor: pointer;
+  background-color: #0040ae;
+}
+.sign-up-sign-form-content-left-side-form-submit {
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 12.5px;
+  font-size: 16px;
+}
+.sign-up-sign-form-content-left-side-form-submit-icon {
+  margin-left: 10px;
+}
+.sign-up-sign-form-content-right-side-variations-title-box {
+  margin-top: 15px;
+  text-align: center;
+  width: 60%;
+}
+.sign-up-sign-form-content-right-side-variations-title {
+  font-weight: bold;
+  font-size: 24px;
+}
+.sign-up-sign-form-content-right-side-variations-social-box {
+  margin: auto;
+  width: 58.5%;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 5fr;
+}
+.sign-up-sign-form-content-right-side-variations-social-icon {
+  font-size: 32px;
+  color: #156bff;
+}
+.sign-up-sign-form-content-right-side-variations-social-icon:hover,
+.sign-up-sign-form-content-right-side-variations-social-icon:focus,
+.sign-up-sign-form-content-right-side-variations-social-icon:active {
+  cursor: pointer;
+  color: #0040ae;
+}
+.sign-up-sign-form-content-right-side-image {
+  width: 65%;
+  margin-top: 35px;
+}
+.sign-in-modal-error-box {
+  text-align: center;
+}
+.sign-up-sign-form-content-left-side-form-country-country-list {
+  position: absolute;
+  width: 22%;
+  height: 400px;
+  text-align: center;
+  background-color: #ffffff;
+  border: 2px solid #156bff;
+  border-radius: 25px;
+  margin-top: 95px;
+  overflow: auto;
+}
+.sign-up-sign-form-content-left-side-form-country-country-list-country-box {
+  border-bottom: 1px solid #D8D8D8;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  font-weight: bold;
+}
+.sign-up-sign-form-content-left-side-form-country-country-list-country-box:hover,
+.sign-up-sign-form-content-left-side-form-country-country-list-country-box:focus,
+.sign-up-sign-form-content-left-side-form-country-country-list-country-box:active {
+  cursor: pointer;
+  color: #156bff;
+}
