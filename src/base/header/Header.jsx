@@ -5,7 +5,6 @@ import Translate from "react-translate-component";
 
 import MobileMenu from "./components/MobileMenu.jsx";
 import SignInModal from "../sign_in_modal/SignInModal.jsx";
-import SignUpModal from "../sign_up_modal/SignUpModal.jsx";
 import { ProfileData } from "./components/ProfileData.jsx";
 
 import Logo from "../images/logo.svg";

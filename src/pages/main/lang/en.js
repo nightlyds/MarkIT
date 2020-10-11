@@ -53,7 +53,7 @@ export default {
   linkTextSecondFirst: "Website development",
   linkTextSecondSecond: "Setting up ads",
   linkTextSecondThird: "Marketing support",
-  linkTitleThird: "Training:",
+  linkTitleThird: "Skills:",
   linkTextThirdFirst: "Knowledge base",
   linkTextThirdSecond: "Video lessons",
   linkTextThirdThird: "Ask a Question",

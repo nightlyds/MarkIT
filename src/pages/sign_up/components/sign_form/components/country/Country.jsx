@@ -6,7 +6,7 @@ import { CountryList } from "./CountryList.jsx";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export const Country = ({ giveCountry, getErrorCountry, giveErrorCountry }) => {
+export const Country = ({ countryError, countryChange, countryErrorChange }) => {
   let [country, setCountry] = useState(false);
   let [countryList, setCountryList] = useState(false);
 
@@ -16,8 +16,8 @@ export const Country = ({ giveCountry, getErrorCountry, giveErrorCountry }) => {
 
   const getCountry = (value) => {
     setCountry(value);
-    giveCountry(value);
-    giveErrorCountry(false);
+    countryChange(value);
+    countryErrorChange(false);
   }
   return (
     <div className="sign-up-sign-form-content-left-side-form-country-box">
@@ -59,7 +59,7 @@ export const Country = ({ giveCountry, getErrorCountry, giveErrorCountry }) => {
         </div>
       )}
 
-      {getErrorCountry && (
+      {countryError && (
         <div className="sign-in-modal-error-box">
           <Translate
             component="p"

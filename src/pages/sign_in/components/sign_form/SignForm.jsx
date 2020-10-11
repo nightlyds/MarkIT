@@ -1,12 +1,14 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
+import { Provider } from "react-redux";
 import Translate from "react-translate-component";
 
 import {
-  Email,
-  Password,
-  Submit
-} from "./components";
+  EmailWrap,
+  PasswordWrap,
+  SubmitWrap,
+} from "./components/componentsWrap";
+
+import store from './store/store.js';
 
 import SignInImage from "../../images/sign_in.svg";
 
@@ -18,28 +20,6 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const SignForm = () => {
-  let [email, setEmail] = useState(false);
-  let [errorEmail, setErrorEmail] = useState(false);
-
-  let [password, setPassword] = useState(false);
-  let [errorPassword, setErrorPassword] = useState(false);
-
-  const getEmail = (value) => {
-    setEmail(value);
-  };
-
-  const getErrorEmail = (value) => {
-    setErrorEmail(value);
-  };
-  
-  const getPassword = (value) => {
-    setPassword(value);
-  };
-
-  const getErrorPassword = (value) => {
-    setErrorPassword(value);
-  };
-
   return (
     <div className="sign-in-sign-form">
       <div className="sign-in-sign-form-content">
@@ -52,22 +32,11 @@ export const SignForm = () => {
             />
           </div>
           <div className="sign-in-sign-form-content-left-side-form">
-            <Email
-              giveEmail={getEmail}
-              getErrorEmail={errorEmail}
-              giveErrorEmail={getErrorEmail}
-            />
-            <Password
-              givePassword={getPassword}
-              getErrorPassword={errorPassword}
-              giveErrorPassword={getErrorPassword}
-            />
-            <Submit
-              getEmail={email}
-              getPassword={password}
-              giveErrorEmail={getErrorEmail}
-              giveErrorPassword={getErrorPassword}
-            />
+            <Provider store={store}>
+              <EmailWrap />
+              <PasswordWrap />
+              <SubmitWrap />
+            </Provider>
           </div>
         </div>
         <div className="sign-in-sign-form-content-right-side">

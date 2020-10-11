@@ -1,14 +1,14 @@
 import React from "react";
 import Translate from "react-translate-component";
 
-export const Phone = ({ givePhone, getErrorPhone, giveErrorPhone }) => {
+export const Phone = ({ phoneError, phoneChange, phoneErrorChange }) => {
   const validatePhone = (phone) => {
     let valid = /^\d[\d\(\)\ -]{4,14}\d$/;
     if (valid.test(phone) === true && phone.length >= 8) {
-      givePhone(phone);
-      giveErrorPhone(false);
+      phoneChange(phone);
+      phoneErrorChange(false);
     } else {
-      givePhone(false);
+      phoneChange(false);
     }
   };
   return (
@@ -27,7 +27,7 @@ export const Phone = ({ givePhone, getErrorPhone, giveErrorPhone }) => {
           validatePhone(phone.target.value);
         }}
       />
-      {getErrorPhone && (
+      {phoneError && (
         <div className="sign-in-modal-error-box">
           <Translate
             component="p"

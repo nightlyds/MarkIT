@@ -1,21 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import Translate from "react-translate-component";
 
-export const Password = ({ passwordProps, email, giveEmailError }) => {
-  let [errorPassword, setErrorPassword] = useState(false);
-
+export const Password = ({ changePassword, changePasswordError, passwordError }) => {
   const checkPassword = (password) => {
-    if (!email) {
-      giveEmailError(true);
-    }
     if (password.length >= 8) {
-      passwordProps(password);
-      setErrorPassword(false);
+      changePassword(password);
+      changePasswordError(false);
     } else {
-      passwordProps(false);
-      setErrorPassword(true);
+      changePassword(false);
+      changePasswordError(true);
     }
   };
+  console.log(changePassword, changePasswordError, passwordError)
   return (
     <div className="sign-in-password-box">
       <Translate
@@ -27,7 +23,7 @@ export const Password = ({ passwordProps, email, giveEmailError }) => {
           checkPassword(password.target.value);
         }}
       />
-      {errorPassword && (
+      {passwordError && (
         <div className="sign-in-modal-error-box">
           <Translate
             component="p"

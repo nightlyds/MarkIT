@@ -6,16 +6,16 @@ import { faUserPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const Submit = ({
-  getEmail,
-  getPhone,
-  getCountry,
-  getPassword,
-  getCheckbox,
-  giveErrorEmail,
-  giveErrorPhone,
-  giveErrorPassword,
-  giveErrorCheckBox,
-  giveErrorCountry,
+  email,
+  password,
+  country,
+  phone,
+  checkbox,
+  emailErrorChange,
+  countryErrorChange,
+  phoneErrorChange,
+  passwordErrorChange,
+  checkboxErrorChange,
 }) => {
   const setCookie = (name, value) => {
     let date = new Date();
@@ -23,24 +23,24 @@ export const Submit = ({
     document.cookie = name + "=" + value + "; expires='" + date + ";'";
   };
   const checkData = () => {
-    if (!getEmail) {
-      giveErrorEmail(true);
+    if (!email) {
+      emailErrorChange(true);
     }
-    if (!getPhone) {
-      giveErrorPhone(true);
+    if (!phone) {
+      phoneErrorChange(true);
     }
-    if (!getPassword) {
-      giveErrorPassword(true);
+    if (!password) {
+      passwordErrorChange(true);
     }
-    if (!getCountry) {
-      giveErrorCountry(true);
+    if (!country) {
+      countryErrorChange(true);
     }
-    if (!getCheckbox) {
-      giveErrorCheckBox(true);
+    if (!checkbox) {
+      checkboxErrorChange(true);
     }
-    if (getEmail && getPassword && getPhone && getCountry && getCheckbox) {
-      setCookie("email", getEmail);
-      setCookie("password", getPassword);
+    if (email && password && phone && country && checkbox) {
+      setCookie("email", email);
+      setCookie("password", password);
       window.location = "/myprofile";
     }
   };

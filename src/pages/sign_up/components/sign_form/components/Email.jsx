@@ -1,14 +1,14 @@
 import React from "react";
 import Translate from "react-translate-component";
 
-export const Email = ({ giveEmail, getErrorEmail, giveErrorEmail }) => {
+export const Email = ({ emailError, emailChange, emailErrorChange }) => {
   const validateEmail = (email) => {
     var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
     if (reg.test(email) === true) {
-      giveEmail(email);
-      giveErrorEmail(false);
+      emailChange(email);
+      emailErrorChange(false);
     } else {
-      giveEmail(false);
+      emailChange(false);
     }
   };
   return (
@@ -27,7 +27,7 @@ export const Email = ({ giveEmail, getErrorEmail, giveErrorEmail }) => {
           validateEmail(email.target.value);
         }}
       />
-      {getErrorEmail && (
+      {emailError && (
         <div className="sign-in-modal-error-box">
           <Translate
             component="p"

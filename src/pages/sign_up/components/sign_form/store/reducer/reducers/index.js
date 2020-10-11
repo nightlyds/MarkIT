@@ -1,0 +1,10 @@
+export { emailReducer } from './emailReducer.js';
+export { emailErrorReducer } from './emailErrorReducer.js';
+export { passwordReducer } from './passwordReducer.js';
+export { passwordErrorReducer } from './passwordErrorReducer.js';
+export { countryReducer } from './countryReducer.js';
+export { countryErrorReducer } from './countryErrorReducer.js';
+export { phoneReducer } from './phoneReducer.js';
+export { phoneErrorReducer } from './phoneErrorReducer.js';
+export { checkboxReducer } from './checkboxReducer.js';
+export { checkboxErrorReducer } from './checkboxErrorReducer.js';

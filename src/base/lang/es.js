@@ -5,7 +5,7 @@ export default {
   products: "Productos",
   signIn: "Entrada",
   signUp: "Regístrate",
-  footerCall: "Calls within EUROPE",
+  footerCall: "Llamadas internacionales",
   placeholderSignEmail: "Email",
   placeholderSignPassword: "Password",
   placeholderSignName: "Name",

@@ -6,10 +6,10 @@ import { faSignInAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const Submit = ({
-  getEmail,
-  getPassword,
-  giveErrorEmail,
-  giveErrorPassword,
+  email,
+  password,
+  changeEmailError,
+  changePasswordError
 }) => {
   const getCookie = (name) => {
     let cookie = " " + document.cookie;
@@ -31,15 +31,15 @@ export const Submit = ({
     return setStr;
   };
   const checkData = () => {
-    if (!getEmail) {
-      giveErrorEmail(true);
+    if (!email) {
+      changeEmailError(true);
     }
-    if (!getPassword) {
-      giveErrorPassword(true);
+    if (!password) {
+      changePasswordError(true);
     }
     if (
-      getCookie("email") === getEmail &&
-      getCookie("password") === getPassword
+      getCookie("email") === email &&
+      getCookie("password") === password
     ) {
       window.location = "/myprofile";
     }

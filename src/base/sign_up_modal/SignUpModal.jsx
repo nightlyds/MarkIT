@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import Translate from "react-translate-component";
 
 import Close from "../images/close.svg";
